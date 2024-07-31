@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../css.js"></script>
+    <title>Register - Ez Jobs</title>
+    <script src="./index.js"></script>
+  </head>
+
+  <body>
+    <div
+      class="flex min-h-full items-center justify-center py-24 px-4 sm:px-6 lg:px-8"
+    >
+      <div class="w-full max-w-md space-y-8">
+        <div>
+          <img
+            class="mx-auto h-12 w-auto"
+            src="../src/logo.png"
+            alt="Ez Jobs"
+          />
+          <h2
+            class="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900"
+          >
+            Register to your account
+          </h2>
+        </div>
+        <form
+          name="register"
+          class="mt-8 space-y-6"
+          action="../php/registerSubmit.php"
+          method="POST"
+          onsubmit="return validation()"
+        >
+          <input type="hidden" name="remember" value="true" />
+          <div class="-space-y-px rounded-md shadow-sm">
+            <div>
+              <label for="name" class="sr-only">Name</label>
+              <input
+                id="name"
+                name="uname"
+                type="text"
+                autocomplete="name"
+                required
+                class="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-cyan-500 focus:outline-none focus:ring-cyan-500 sm:text-sm"
+                placeholder="Name"
+              />
+              <script>
+                console.log(document.getElementById("name").classList.value);
+              </script>
+            </div>
+            <div>
+              <label for="email-address" class="sr-only">Email address</label>
+              <input
+                id="email-address"
+                name="email"
+                type="email"
+                autocomplete="email"
+                required
+                class="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-cyan-500 focus:outline-none focus:ring-cyan-500 sm:text-sm"
+                placeholder="Email address"
+              />
+            </div>
+            <div>
+              <label for="password" class="sr-only">Password</label>
+              <input
+                id="password"
+                name="pwd"
+                type="password"
+                autocomplete="current-password"
+                required
+                class="relative block w-full appearance-none rounded-none rounded-b-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-cyan-500 focus:outline-none focus:ring-cyan-500 sm:text-sm"
+                placeholder="Password"
+              />
+            </div>
+          </div>
+
+          <div>
+            <button
+              type="submit"
+              class="group relative flex w-full justify-center rounded-md border border-transparent bg-cyan-600 py-2 px-4 text-sm font-medium text-white hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2"
+            >
+              <span class="absolute inset-y-0 right-0 flex items-center pr-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="h-5 w-5 text-cyan-500 group-hover:text-cyan-400"
+                >
+                  <path
+                    d="M6.25 6.375a4.125 4.125 0 118.25 0 4.125 4.125 0 01-8.25 0zM3.25 19.125a7.125 7.125 0 0114.25 0v.003l-.001.119a.75.75 0 01-.363.63 13.067 13.067 0 01-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 01-.364-.63l-.001-.122zM19.75 7.5a.75.75 0 00-1.5 0v2.25H16a.75.75 0 000 1.5h2.25v2.25a.75.75 0 001.5 0v-2.25H22a.75.75 0 000-1.5h-2.25V7.5z"
+                  />
+                </svg>
+              </span>
+              Register
+            </button>
+          </div>
+          <div class="flex items-center justify-center">
+            <div class="text-sm">
+              <a
+                href="../login/"
+                class="font-medium text-cyan-600 hover:text-cyan-500"
+                >Already Registered? Login from here</a
+              >
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
